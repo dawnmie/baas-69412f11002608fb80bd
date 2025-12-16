@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { account } from './appwrite'
-
+import './DarkTheme.css'
 function App() {
   const [user, setUser] = useState(null)
   const [email, setEmail] = useState('')
