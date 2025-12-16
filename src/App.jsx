@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>app bu i l d</h1>
+      <h1>Appbuild</h1>
       <form onSubmit={login}>
         <h2>Login</h2>
         <input
