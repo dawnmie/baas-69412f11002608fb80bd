@@ -57,9 +57,68 @@ function App() {
   if (user) {
     return (
       <div className="container">
-        <h1>Welcome, {user.name || user.email}!</h1>
-        <p>You are logged in.</p>
-        <button onClick={logout}>Logout</button>
+        <div className="user-profile">
+          <h1>Welcome back, {user.name || user.email.split('@')[0]}!</h1>
+          <div className="user-info">
+            <div className="info-item">
+              <strong>Email:</strong> {user.email}
+            </div>
+            {user.name && (
+              <div className="info-item">
+                <strong>Name:</strong> {user.name}
+              </div>
+            )}
+            <div className="info-item">
+              <strong>Member since:</strong> {new Date(user.$createdAt).toLocaleDateString()}
+            </div>
+          </div>
+        </div>
+
+        <div className="dashboard-sections">
+          <div className="section">
+            <h2>🚀 Quick Actions</h2>
+            <div className="action-buttons">
+              <button onClick={() => alert('Profile settings would open here')}>
+                Edit Profile
+              </button>
+              <button onClick={() => alert('Account settings would open here')}>
+                Account Settings
+              </button>
+            </div>
+          </div>
+
+          <div className="section">
+            <h2>📊 Your Dashboard</h2>
+            <div className="stats-grid">
+              <div className="stat-card">
+                <div className="stat-number">1</div>
+                <div className="stat-label">Active Sessions</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-number">{Math.floor(Math.random() * 10) + 1}</div>
+                <div className="stat-label">Projects</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-number">{Math.floor(Math.random() * 50) + 10}</div>
+                <div className="stat-label">Activities</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="section">
+            <h2>💡 Tips & Features</h2>
+            <ul className="features-list">
+              <li>Secure authentication with Appwrite</li>
+              <li>Responsive dark theme design</li>
+              <li>Easy to extend with new features</li>
+              <li>Modern React hooks implementation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="logout-section">
+          <button onClick={logout} className="logout-button">Logout</button>
+        </div>
       </div>
     )
   }
