@@ -100,32 +100,6 @@ function App() {
       </div>
     )
   }
-                <div className="stat-label">Projects</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">{Math.floor(Math.random() * 50) + 10}</div>
-                <div className="stat-label">Activities</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section">
-            <h2>💡 Tips & Features</h2>
-            <ul className="features-list">
-              <li>Secure authentication with Appwrite</li>
-              <li>Responsive dark theme design</li>
-              <li>Easy to extend with new features</li>
-              <li>Modern React hooks implementation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="logout-section">
-          <button onClick={logout} className="logout-button">Logout</button>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <div className="container">
