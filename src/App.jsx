@@ -57,45 +57,49 @@ function App() {
   if (user) {
     return (
       <div className="container">
-        <div className="user-profile">
-          <h1>Welcome back, {user.name || user.email.split('@')[0]}!</h1>
-          <div className="user-info">
-            <div className="info-item">
-              <strong>Email:</strong> {user.email}
+        <div className="user-welcome">
+          <h1>Welcome, {user.name || user.email.split('@')[0]}!</h1>
+          <p>You are successfully logged in to your account.</p>
+        </div>
+
+        <div className="user-details">
+          <h2>Your Account Information</h2>
+          <div className="detail-item">
+            <span className="detail-label">Email:</span>
+            <span className="detail-value">{user.email}</span>
+          </div>
+          {user.name && (
+            <div className="detail-item">
+              <span className="detail-label">Name:</span>
+              <span className="detail-value">{user.name}</span>
             </div>
-            {user.name && (
-              <div className="info-item">
-                <strong>Name:</strong> {user.name}
-              </div>
-            )}
-            <div className="info-item">
-              <strong>Member since:</strong> {new Date(user.$createdAt).toLocaleDateString()}
-            </div>
+          )}
+          <div className="detail-item">
+            <span className="detail-label">Member since:</span>
+            <span className="detail-value">{new Date(user.$createdAt).toLocaleDateString()}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">User ID:</span>
+            <span className="detail-value">{user.$id}</span>
           </div>
         </div>
 
-        <div className="dashboard-sections">
-          <div className="section">
-            <h2>🚀 Quick Actions</h2>
-            <div className="action-buttons">
-              <button onClick={() => alert('Profile settings would open here')}>
-                Edit Profile
-              </button>
-              <button onClick={() => alert('Account settings would open here')}>
-                Account Settings
-              </button>
-            </div>
-          </div>
+        <div className="account-actions">
+          <h2>Account Actions</h2>
+          <button onClick={() => alert('This would open profile editing functionality')}>
+            Edit Profile
+          </button>
+          <button onClick={() => alert('This would show account settings')}>
+            Account Settings
+          </button>
+        </div>
 
-          <div className="section">
-            <h2>📊 Your Dashboard</h2>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-number">1</div>
-                <div className="stat-label">Active Sessions</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">{Math.floor(Math.random() * 10) + 1}</div>
+        <div className="logout-section">
+          <button onClick={logout} className="logout-button">Sign Out</button>
+        </div>
+      </div>
+    )
+  }
                 <div className="stat-label">Projects</div>
               </div>
               <div className="stat-card">
