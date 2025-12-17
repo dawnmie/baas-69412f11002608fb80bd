@@ -12,27 +12,29 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 450px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 30px;
   background: #2d2d2d;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
 h1 {
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 h2 {
   color: #cccccc;
-  font-size: 18px;
-  margin: 20px 0 15px;
-  padding-bottom: 8px;
+  font-size: 16px;
+  margin: 20px 0 12px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #444;
+  font-weight: 600;
 }
 
 form {
@@ -77,51 +79,9 @@ button:hover {
 p {
   color: #cccccc;
   text-align: center;
+  margin: 0 0 20px 0;
 }
 
-/* User Profile Styles */
-.user-profile {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.user-info {
-  background: #3a3a3a;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-.info-item {
-  margin: 8px 0;
-  padding: 8px 0;
-  border-bottom: 1px solid #444;
-}
-
-.info-item:last-child {
-  border-bottom: none;
-}
-
-/* Dashboard Sections */
-.dashboard-sections {
-  margin: 30px 0;
-}
-
-.section {
-  margin-bottom: 25px;
-}
-
-/* Action Buttons */
-.action-buttons {
-  display: grid;
-  gap: 12px;
-}
-
-.action-buttons button {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-}
-
-.action-buttons button:hover {
 /* User Welcome Section */
 .user-welcome {
   text-align: center;
@@ -151,8 +111,8 @@ p {
   margin-top: 0;
   margin-bottom: 15px;
   color: #ffffff;
-  font-size: 18px;
-  padding-bottom: 8px;
+  font-size: 16px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #444;
 }
 
@@ -176,6 +136,8 @@ p {
   color: #ffffff;
   text-align: right;
   word-break: break-all;
+  max-width: 60%;
+  text-align: right;
 }
 
 /* Account Actions */
@@ -193,8 +155,26 @@ p {
   margin-bottom: 10px;
 }
 
+.account-actions button:last-child {
+  margin-bottom: 0;
+}
+
 .account-actions button:hover {
   box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+/* Logout Section */
+.logout-section {
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+}
+
+.logout-button:hover {
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
 }
 
 /* Logout Section */
