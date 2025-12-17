@@ -122,75 +122,89 @@ p {
 }
 
 .action-buttons button:hover {
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
-}
-
-/* Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.stat-card {
-  background: #3a3a3a;
-  padding: 15px;
-  border-radius: 10px;
+/* User Welcome Section */
+.user-welcome {
   text-align: center;
-  transition: transform 0.2s;
+  margin-bottom: 25px;
 }
 
-.stat-card:hover {
-  transform: translateY(-3px);
-  background: #444;
-}
-
-.stat-number {
+.user-welcome h1 {
+  margin-bottom: 10px;
   font-size: 24px;
-  font-weight: bold;
-  color: #667eea;
-  margin-bottom: 5px;
 }
 
-.stat-label {
-  font-size: 12px;
+.user-welcome p {
   color: #aaa;
+  font-size: 14px;
+  margin: 0;
 }
 
-/* Features List */
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0 0;
-}
-
-.features-list li {
+/* User Details Section */
+.user-details {
   background: #3a3a3a;
-  padding: 12px;
-  margin-bottom: 8px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.user-details h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #444;
+}
+
+.detail-item {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
 }
 
-.features-list li:before {
-  content: "✓";
-  color: #4cd964;
-  margin-right: 10px;
-  font-weight: bold;
+.detail-item:last-child {
+  border-bottom: none;
 }
 
-/* Logout Button */
+.detail-label {
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.detail-value {
+  color: #ffffff;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* Account Actions */
+.account-actions {
+  margin-bottom: 25px;
+}
+
+.account-actions h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.account-actions button {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  margin-bottom: 10px;
+}
+
+.account-actions button:hover {
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+
+/* Logout Section */
 .logout-section {
-  margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #444;
 }
 
 .logout-button {
   background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
-  width: 100%;
 }
 
 .logout-button:hover {
