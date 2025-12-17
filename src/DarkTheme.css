@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 40px;
   background: #2d2d2d;
@@ -24,12 +24,15 @@ h1 {
   color: #ffffff;
   margin-bottom: 30px;
   text-align: center;
+  font-size: 28px;
 }
 
 h2 {
   color: #cccccc;
   font-size: 18px;
-  margin: 20px 0 10px;
+  margin: 20px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #444;
 }
 
 form {
@@ -74,4 +77,122 @@ button:hover {
 p {
   color: #cccccc;
   text-align: center;
+}
+
+/* User Profile Styles */
+.user-profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.info-item {
+  margin: 8px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+/* Dashboard Sections */
+.dashboard-sections {
+  margin: 30px 0;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: grid;
+  gap: 12px;
+}
+
+.action-buttons button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.action-buttons button:hover {
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat-card {
+  background: #3a3a3a;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  background: #444;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.features-list li {
+  background: #3a3a3a;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li:before {
+  content: "✓";
+  color: #4cd964;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Logout Button */
+.logout-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  width: 100%;
+}
+
+.logout-button:hover {
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
 }
